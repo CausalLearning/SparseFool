@@ -7,11 +7,11 @@ This function implements the algorithm proposed in [[1]]() using PyTorch to find
 
 The parameters of the function are:
 
-- `im`: Torch image of size `1xHxWx3d`.
+- `im`: image (tensor) of size `1xHxWx3d`.
 - `net`: neural network.
 - `lb`: the lower bounds for the adversarial image values.
 - `ub`: the upper bounds for the adversarial image values.
-- `lambda_ `: the factor that moves the hyerplane deeper into the classification region, by default = 3.
+- `lambda_ `: the factor that moves the hyperplane deeper into the classification region, by default = 3.
 - `max_iter`: max number of iterations, by default = 50.
 
 ### linear_solver.py
