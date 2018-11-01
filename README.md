@@ -9,7 +9,7 @@ To execute the code, please make sure that the following packages are installed:
 - [PyTorch and Torchvision](https://pytorch.org/) (install with CUDA if available)
 - [matplotlib](https://matplotlib.org/users/installing.html)
 
-## Executing the code
+## Executing the demo
 
 ### test_sparsefool.py
 
