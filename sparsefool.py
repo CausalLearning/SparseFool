@@ -29,5 +29,4 @@ def sparsefool(x_0, net, lb, ub, lambda_=3., max_iter=20, epsilon=0.02):
         loops += 1
 
     r = fool_im - x_0
-
     return fool_im, r, pred_label, fool_label, loops
