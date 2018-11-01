@@ -24,7 +24,7 @@ net = net.to(device)
 net.eval()
 
 # Load Image and Resize
-im_orig = Image.open("pedestrian_light.jpg")
+im_orig = Image.open("./data/pedestrian_light.jpg")
 im_sz = 224
 im_orig = transforms.Compose([transforms.Resize((im_sz, im_sz))])(im_orig)
 labels = open(os.path.join('synset_words.txt'), 'r').read().split('\n')
