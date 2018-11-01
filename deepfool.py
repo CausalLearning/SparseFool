@@ -51,7 +51,7 @@ def deepfool(im, net, lambda_fac=3., num_classes=10, overshoot=0.02, max_iter=50
 
         r_i = torch.clamp(pert, min=1e-4) * w / w.norm()
         r_tot = r_tot + r_i
-        
+
         pert_image = pert_image + r_i
 
         check_fool = image + (1 + overshoot) * r_tot
