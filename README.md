@@ -1,5 +1,5 @@
 # SparseFool
-SparseFool is a fast and efficient algorithm for sparse adversarial perturbations.
+This repository contains the official implementation of SparseFool algorithm described in [[1]]().
 
 ### Requirements
 
@@ -30,14 +30,6 @@ This function implements the other algorithm proposed in [[1]]() for solving the
 
 This function implements the algorithm proposed in [[2]](https://arxiv.org/pdf/1511.04599.pdf) for computing adversarial perturbations. It is used by sparsefool.py for the linear approximation of the decision boundary.
 
-### test_sparsefool.py
-
-A simple demo which computes the sparse adversarial perturbation of a test image.
-
-### test_perceptibility.py
-
-A simple demo that controls the perceptibility of the resulted perturbation of a test image.
-
 ### utils.py
 
 Includes general functions
@@ -48,6 +40,16 @@ Contains some examples for the demos. The images where cropped to have square di
 
 - `cat.jpg`([source](https://www.hd-wallpapersdownload.com/desktop-hd-cat-and-kittens-pics/)): it is used by test_sparsefool.py.
 - `red_light.jpg`([source](https://www.gettyimages.ch/detail/nachrichtenfoto/traffic-light-controls-the-flow-of-vehicles-and-nachrichtenfoto/52663127)): it is used by test_perceptibility.py.
+
+## Execution
+
+### test_sparsefool.py
+
+A simple demo which computes the sparse adversarial perturbation of a test image.
+
+### test_perceptibility.py
+
+A simple demo that controls the perceptibility of the resulted perturbation of a test image.
 
 ## Reference
 [1] No reference yet...
