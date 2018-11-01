@@ -5,9 +5,9 @@ SparseFool is a fast and efficient algorithm for sparse adversarial perturbation
 
 To execute the code, please make sure that the following packages are installed:
 
-numpy
-
-    ``
+- `[numpy](https://docs.scipy.org/doc/numpy-1.15.1/user/install.html)`
+- `[PyTorch and Torchvision](https://pytorch.org/)(install with CUDA if available)
+- `[matplotlib](https://matplotlib.org/users/installing.html)`
 
 ### sparsefool.py
 
