@@ -31,6 +31,6 @@ A simple demo which computes the sparse adversarial perturbation of a test image
 A simple demo that controls the perceptibility of the resulted perturbation of a test image.
 
 ## Reference
-[1]
+[1] No reference yet...
 [2] S. Moosavi-Dezfooli, A. Fawzi, P. Frossard:
 *DeepFool: a simple and accurate method to fool deep neural networks*.  In Computer Vision and Pattern Recognition (CVPR ’16), IEEE, 2016.
