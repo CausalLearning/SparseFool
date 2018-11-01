@@ -6,7 +6,7 @@ from utils import clip_image_values
 from deepfool import deepfool
 
 
-def sparsefool(x_0, net, lb, ub, lambda_fac=6., max_iter=20, epsilon=0.02):
+def sparsefool(x_0, net, lb, ub, lambda_=3., max_iter=20, epsilon=0.02):
 
     pred_label = torch.argmax(net.forward(Variable(x_0, requires_grad=True)).data).item()
 
@@ -18,7 +18,7 @@ def sparsefool(x_0, net, lb, ub, lambda_fac=6., max_iter=20, epsilon=0.02):
 
     while fool_label == pred_label and loops < max_iter:
 
-        normal, x_adv = deepfool(x_i, net, lambda_fac)
+        normal, x_adv = deepfool(x_i, net, lambda_)
 
         x_i = linear_solver(x_i, normal, x_adv, lb, ub)
 
