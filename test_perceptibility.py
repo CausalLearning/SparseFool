@@ -24,13 +24,13 @@ net = net.to(device)
 net.eval()
 
 # Load Image and Resize
-im_orig = Image.open("./data/pedestrian_light.jpg")
+im_orig = Image.open("./data/red_light.jpg")
 im_sz = 224
 im_orig = transforms.Compose([transforms.Resize((im_sz, im_sz))])(im_orig)
 labels = open(os.path.join('synset_words.txt'), 'r').read().split('\n')
 
 # Bounds for Validity and Perceptibility
-delta_l = [255, 50, 20]
+delta_l = [255, 50, 25]
 
 fig, axes = plt.subplots(1, 4)
 for i in range(len(delta_l)):
@@ -65,7 +65,7 @@ for i in range(len(delta_l)):
 
     axes[i + 1].imshow(tf(x_adv.cpu().numpy().squeeze(), mean, std))
     axes[i + 1].set_title("$\delta$: %s" % repr(delta_l[i]))
-    axes[i + 1].set_xlabel("%s (%s pxls)" % (str_label_fool, repr(nnz_pixels(r.cpu().numpy().squeeze()))))
+    axes[i + 1].set_xlabel("%s (%1.2f%% pxls)" % (str_label_fool, 100. * nnz_pixels(r.cpu().numpy().squeeze()) / (im_sz * im_sz)))
     axes[i + 1].xaxis.set_ticks_position('none')
     axes[i + 1].yaxis.set_ticks_position('none')
     axes[i + 1].set_xticklabels([])
