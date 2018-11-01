@@ -1,13 +1,25 @@
 # SparseFool
 This repository contains the official implementation of SparseFool algorithm described in [[1]]().
 
-### Requirements
+## Requirements
 
 To execute the code, please make sure that the following packages are installed:
 
 - [numpy](https://docs.scipy.org/doc/numpy-1.15.1/user/install.html)
 - [PyTorch and Torchvision](https://pytorch.org/) (install with CUDA if available)
 - [matplotlib](https://matplotlib.org/users/installing.html)
+
+## Executing the code
+
+### test_sparsefool.py
+
+A simple demo which computes the sparse adversarial perturbation of a test image.
+
+### test_perceptibility.py
+
+A simple demo that controls the perceptibility of the resulted perturbation of a test image.
+
+## Contents
 
 ### sparsefool.py
 
@@ -40,16 +52,6 @@ Contains some examples for the demos. The images where cropped to have square di
 
 - `cat.jpg`([source](https://www.hd-wallpapersdownload.com/desktop-hd-cat-and-kittens-pics/)): it is used by test_sparsefool.py.
 - `red_light.jpg`([source](https://www.gettyimages.ch/detail/nachrichtenfoto/traffic-light-controls-the-flow-of-vehicles-and-nachrichtenfoto/52663127)): it is used by test_perceptibility.py.
-
-## Execution
-
-### test_sparsefool.py
-
-A simple demo which computes the sparse adversarial perturbation of a test image.
-
-### test_perceptibility.py
-
-A simple demo that controls the perceptibility of the resulted perturbation of a test image.
 
 ## Reference
 [1] No reference yet...
