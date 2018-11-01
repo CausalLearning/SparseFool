@@ -5,7 +5,7 @@ This repository contains the official implementation of SparseFool algorithm des
 
 To execute the code, please make sure that the following packages are installed:
 
-- [numpy](https://docs.scipy.org/doc/numpy-1.15.1/user/install.html)
+- [NumPy](https://docs.scipy.org/doc/numpy-1.15.1/user/install.html)
 - [PyTorch and Torchvision](https://pytorch.org/) (install with CUDA if available)
 - [matplotlib](https://matplotlib.org/users/installing.html)
 
