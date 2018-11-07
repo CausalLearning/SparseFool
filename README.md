@@ -54,7 +54,8 @@ Contains some examples for the demos. The images where cropped to have square di
 - `red_light.jpg`([source](https://www.gettyimages.ch/detail/nachrichtenfoto/traffic-light-controls-the-flow-of-vehicles-and-nachrichtenfoto/52663127)): it is used by test_perceptibility.py.
 
 ## Reference
-[1] No reference yet...
+[1] A. Modas, S.-M. Moosavi-Dezfooli, P. Frossard:
+*SparseFool: a few pixels make a big difference*. arXiv:1811.02248, 2018.
 
 [2] S. Moosavi-Dezfooli, A. Fawzi, P. Frossard:
 *DeepFool: a simple and accurate method to fool deep neural networks*.  In Computer Vision and Pattern Recognition (CVPR ’16), IEEE, 2016.
