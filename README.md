@@ -1,5 +1,5 @@
 # SparseFool
-This repository contains the official implementation of SparseFool algorithm described in [[1]]().
+This repository contains the official implementation of SparseFool algorithm described in [[1]](https://arxiv.org/abs/1811.02248).
 
 ## Requirements
 
@@ -23,7 +23,7 @@ A simple demo that controls the perceptibility of the resulted perturbation of a
 
 ### sparsefool.py
 
-This function implements the algorithm proposed in [[1]]() using PyTorch to find sparse adversarial perturbations.
+This function implements the algorithm proposed in [[1]](https://arxiv.org/abs/1811.02248) using PyTorch to find sparse adversarial perturbations.
 
 The parameters of the function are:
 
@@ -36,7 +36,7 @@ The parameters of the function are:
 
 ### linear_solver.py
 
-This function implements the lgorithm proposed in [[1]]() for solving the linearized box-constrained problem. It is used by sparsefool.py for solving the linearized problem.
+This function implements the lgorithm proposed in [[1]](https://arxiv.org/abs/1811.02248) for solving the linearized box-constrained problem. It is used by sparsefool.py for solving the linearized problem.
 
 ### deepfool.py
 
