@@ -34,7 +34,7 @@ def valid_bounds(img, delta=255):
     return lb, ub
 
 
-def tf(x, mean, std):
+def inv_tf(x, mean, std):
 
     for i in range(len(mean)):
 
@@ -47,18 +47,12 @@ def tf(x, mean, std):
     return x
 
 
-def tf_r(r, mean, std):
+def inv_tf_pert(r):
 
-    for i in range(len(mean)):
+    pert = np.sum(np.absolute(r), axis=0)
+    pert[pert != 0] = 1
 
-        idx = r[i] != 0
-        r[i][idx] = np.multiply(r[i][idx], std[i], dtype=np.float32)
-        r[i][idx] = np.add(r[i][idx], mean[i], dtype=np.float32)
-
-    r = np.swapaxes(r, 0, 2)
-    r = np.swapaxes(r, 0, 1)
-
-    return r
+    return pert
 
 
 def get_label(x):
@@ -71,4 +65,4 @@ def get_label(x):
 
 
 def nnz_pixels(arr):
-    return np.count_nonzero(np.absolute(arr[0, :, :]) + np.absolute(arr[1, :, :]) + np.absolute(arr[2, :, :]))
+    return np.count_nonzero(np.sum(np.absolute(arr), axis=0))

@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import os
-from utils import nnz_pixels, tf, tf_r, get_label
+from utils import nnz_pixels, inv_tf, inv_tf_pert, get_label
 from sparsefool import sparsefool
 from utils import valid_bounds
 from PIL import Image
@@ -63,12 +63,12 @@ str_label_fool = get_label(labels[np.int(fool_label)].split(',')[0])
 fig, axes = plt.subplots(1, 3)
 
 axes[0].set_title(str_label_pred)
-axes[1].set_title("%s pixels"%repr(nnz_pixels(r.cpu().numpy().squeeze())))
+axes[1].set_title("%s pixels" % repr(nnz_pixels(r.cpu().numpy().squeeze())))
 axes[2].set_title(str_label_fool)
 
 axes[0].imshow(im_orig)
-axes[1].imshow(tf_r(r.cpu().numpy().squeeze(), mean, std))
-axes[2].imshow(tf(x_adv.cpu().numpy().squeeze(), mean, std))
+axes[1].imshow(inv_tf_pert(r.cpu().numpy().squeeze()), cmap='gray')
+axes[2].imshow(inv_tf(x_adv.cpu().numpy().squeeze(), mean, std))
 
 axes[0].axis('off')
 axes[1].axis('off')

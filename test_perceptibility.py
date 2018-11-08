@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import os
-from utils import nnz_pixels, tf, get_label
+from utils import nnz_pixels, inv_tf, get_label
 from sparsefool import sparsefool
 from utils import valid_bounds
 from PIL import Image
@@ -63,7 +63,7 @@ for i in range(len(delta_l)):
     str_label_pred = get_label(labels[np.int(pred_label)].split(',')[0])
     str_label_fool = get_label(labels[np.int(fool_label)].split(',')[0])
 
-    axes[i + 1].imshow(tf(x_adv.cpu().numpy().squeeze(), mean, std))
+    axes[i + 1].imshow(inv_tf(x_adv.cpu().numpy().squeeze(), mean, std))
     axes[i + 1].set_title("$\delta$: %s" % repr(delta_l[i]))
     axes[i + 1].set_xlabel("%s (%1.2f%% pxls)" % (str_label_fool, 100. * nnz_pixels(r.cpu().numpy().squeeze()) / (im_sz * im_sz)))
     axes[i + 1].xaxis.set_ticks_position('none')
