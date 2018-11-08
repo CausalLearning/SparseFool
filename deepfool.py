@@ -5,9 +5,7 @@ from torch.autograd.gradcheck import zero_gradients
 from torch.autograd import Variable
 
 
-def deepfool(im, net, lambda_fac=3., num_classes=10, overshoot=0.02, max_iter=50):
-
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+def deepfool(im, net, lambda_fac=3., num_classes=10, overshoot=0.02, max_iter=50, device='cuda'):
 
     image = copy.deepcopy(im)
     input_shape = image.size()
