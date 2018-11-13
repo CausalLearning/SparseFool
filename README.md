@@ -31,7 +31,7 @@ The parameters of the function are:
 - `net`: neural network.
 - `lb`: the lower bounds for the adversarial image values.
 - `ub`: the upper bounds for the adversarial image values.
-- `lambda_ `: the factor for going further into the classification region, by default = 3.
+- `lambda_ `: the control parameter for going further into the classification region, by default = 3.
 - `max_iter`: max number of iterations, by default = 50.
 
 ### linear_solver.py
