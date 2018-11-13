@@ -27,7 +27,7 @@ This function implements the algorithm proposed in [[1]](https://arxiv.org/abs/1
 
 The parameters of the function are:
 
-- `im`: image (tensor) of size `1xHxWx3d`.
+- `im`: image (tensor) of size `1xCxHxW`, where `C` are the channels.
 - `net`: neural network.
 - `lb`: the lower bounds for the adversarial image values.
 - `ub`: the upper bounds for the adversarial image values.
