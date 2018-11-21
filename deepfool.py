@@ -60,7 +60,7 @@ def deepfool(im, net, lambda_fac=3., num_classes=10, overshoot=0.02, max_iter=50
     x = Variable(pert_image, requires_grad=True)
     fs = net.forward(x)
     (fs[0, k_i] - fs[0, label]).backward(retain_graph=True)
-    grad = x.grad.data
+    grad = copy.deepcopy(x.grad.data)
     grad = grad / grad.norm()
 
     r_tot = lambda_fac * r_tot
