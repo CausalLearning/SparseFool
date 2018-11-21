@@ -36,7 +36,7 @@ The parameters of the function are:
 
 ### linear_solver.py
 
-This function implements the lgorithm proposed in [[1]](https://arxiv.org/abs/1811.02248) for solving the linearized box-constrained problem. It is used by sparsefool.py for solving the linearized problem.
+This function implements the algorithm proposed in [[1]](https://arxiv.org/abs/1811.02248) for solving the linearized box-constrained problem. It is used by sparsefool.py for solving the linearized problem.
 
 ### deepfool.py
 
