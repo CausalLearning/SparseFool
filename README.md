@@ -1,5 +1,5 @@
 # SparseFool
-This repository contains the official implementation of SparseFool algorithm described in [[1]](https://arxiv.org/abs/1811.02248).
+This repository contains the official PyTorch implementation of SparseFool algorithm described in [[1]](https://arxiv.org/abs/1811.02248).
 
 ## Requirements
 
@@ -13,7 +13,7 @@ To execute the code, please make sure that the following packages are installed:
 
 ### test_sparsefool.py
 
-A simple demo which computes the sparse adversarial perturbation of a test image.
+A simple demo that computes the sparse adversarial perturbation of a test image.
 
 ### test_perceptibility.py
 
