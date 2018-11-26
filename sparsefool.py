@@ -18,7 +18,7 @@ def sparsefool(x_0, net, lb, ub, lambda_=3., max_iter=20, epsilon=0.02, device='
 
     while fool_label == pred_label and loops < max_iter:
 
-        normal, x_adv = deepfool(x_i, net, lambda_, device)
+        normal, x_adv = deepfool(x_i, net, lambda_, device=device)
 
         x_i = linear_solver(x_i, normal, x_adv, lb, ub)
 
