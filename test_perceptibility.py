@@ -57,7 +57,7 @@ for i in range(len(delta_l)):
     max_iter = 50
     lambda_ = 3.
 
-    x_adv, r, pred_label, fool_label, loops = sparsefool(im, net, lb, ub, lambda_, max_iter)
+    x_adv, r, pred_label, fool_label, loops = sparsefool(im, net, lb, ub, lambda_, max_iter, device=device)
 
     # Visualize results
     str_label_pred = get_label(labels[np.int(pred_label)].split(',')[0])
