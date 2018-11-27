@@ -63,7 +63,7 @@ str_label_fool = get_label(labels[np.int(fool_label)].split(',')[0])
 fig, axes = plt.subplots(1, 3)
 
 axes[0].set_title(str_label_pred)
-axes[1].set_title("%s pixels" % repr(nnz_pixels(r.cpu().numpy().squeeze())))
+axes[1].set_title("%s pixel(s)" % repr(nnz_pixels(r.cpu().numpy().squeeze())))
 axes[2].set_title(str_label_fool)
 
 axes[0].imshow(im_orig)
