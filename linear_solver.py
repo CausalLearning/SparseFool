@@ -20,7 +20,7 @@ def linear_solver(x_0, normal, boundary_point, lb, ub):
     beta = 0.001 * sign_true
     current_sign = sign_true
 
-    while current_sign == sign_true and coord_vec.nonzero().numel() > 0:
+    while current_sign == sign_true and coord_vec.nonzero().size()[0] > 0:
 
         f_k = torch.dot(plane_normal, x_i.view(-1) - plane_point) + beta
 
