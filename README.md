@@ -55,7 +55,7 @@ Contains some examples for the demos. The images where cropped to have square di
 
 ## Reference
 [1] A. Modas, S. Moosavi-Dezfooli, P. Frossard:
-*SparseFool: a few pixels make a big difference*. arXiv:1811.02248, 2018.
+*SparseFool: a few pixels make a big difference*. In Computer Vision and Pattern Recognition (CVPR ’19), IEEE, 2019.
 
 [2] S. Moosavi-Dezfooli, A. Fawzi, P. Frossard:
 *DeepFool: a simple and accurate method to fool deep neural networks*.  In Computer Vision and Pattern Recognition (CVPR ’16), IEEE, 2016.
