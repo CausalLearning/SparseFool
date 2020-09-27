@@ -1,8 +1,6 @@
 # SparseFool
 This repository contains the official PyTorch implementation of SparseFool algorithm described in [[1]](https://arxiv.org/abs/1811.02248).
 
-Also, SparseFool has been officially integrated into [FoolBox](https://github.com/bethgelab/foolbox).
-
 ## Requirements
 
 To execute the code, please make sure that the following packages are installed:
